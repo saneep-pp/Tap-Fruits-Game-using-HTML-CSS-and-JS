@@ -13,11 +13,10 @@ const plevel = document.querySelector(".plevels");
 const popUp = document.querySelector(".pop-up");
 const okbtnE = document.querySelector(".okbtn");
 const audio = document.getElementById('background-audio');
-const playButton = document.getElementById('play-button');
 
 
 
- playButton.addEventListener('click', function() {
+addEventListener('click', function() {
             audio.muted = false;
             audio.play();
             playButton.style.display = 'none';
@@ -47,7 +46,7 @@ fruits.forEach((item) => {
       4000
     );
 
-    if (point == 10) {
+    if (point == 50) {
       l = 1;
       levels.textContent = l;
       plevel.textContent = l;
@@ -55,7 +54,7 @@ fruits.forEach((item) => {
       fruits.forEach((it) => {
         it.style.animationPlayState = "paused";
       });
-    } else if (point == 20) {
+    } else if (point == 100) {
       l = 2;
       levels.textContent = l;
       plevel.textContent = l;
@@ -63,7 +62,7 @@ fruits.forEach((item) => {
       fruits.forEach((it) => {
         it.style.animationPlayState = "paused";
       });
-    } else if (point == 30) {
+    } else if (point == 150) {
       l = 3;
       levels.textContent = l;
       plevel.textContent = l;
