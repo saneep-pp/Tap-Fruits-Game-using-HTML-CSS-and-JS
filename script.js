@@ -12,7 +12,16 @@ const levels = document.querySelector(".levels");
 const plevel = document.querySelector(".plevels");
 const popUp = document.querySelector(".pop-up");
 const okbtnE = document.querySelector(".okbtn");
+const audio = document.getElementById('background-audio');
+const playButton = document.getElementById('play-button');
 
+
+
+ playButton.addEventListener('click', function() {
+            audio.muted = false;
+            audio.play();
+            playButton.style.display = 'none';
+        });
 let point = 0;
 let l = 1;
 const fruits = [
