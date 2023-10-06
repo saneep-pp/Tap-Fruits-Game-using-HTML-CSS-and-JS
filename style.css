@@ -1,0 +1,383 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+   
+  
+ 
+   
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./Images/fruits.jpg');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    
+}
+
+h1{
+    color: #fff;
+    font-family: cursive;
+    
+}
+
+.cover{
+  display: flex;
+  width: 800px; 
+  height: 700px; 
+}
+.container {
+    display: flex;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(9, 9, 9, 0.638));
+    width: 100%;
+    height: 100%;
+    border: 10px solid aliceblue;
+    border-radius: 20px;
+    margin-bottom: 10rem;
+   
+  }
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(9, 9, 9, 0.638));
+    width: 100%;
+    height: auto;
+    border: 10px solid aliceblue;
+    border-radius: 20px;
+    margin-bottom: 10rem;
+    flex-wrap: wrap;
+    padding: 20px;
+   
+  }
+  .start{
+    display: flex;
+    flex-direction: column;
+    
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    color:grey;
+    margin-bottom: 10px;
+
+  }
+  .exit{
+    display: flex;
+    flex-direction: column;
+    
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    color:grey;
+    margin-bottom: 10px;
+  }
+  .start:hover{
+    background-color: green;
+    color: #fff;
+    transition: 0.7s ease-in-out;
+  }
+  .exit:hover{
+    background-color: red;
+    color: #fff;
+    transition: 0.7s ease-in-out;
+  }
+  .container1 p{
+    color: white;
+    font-size: 20px;
+  }
+ a{
+ text-decoration: none;
+  }
+.result {
+  
+  font-family: cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  flex-wrap: wrap;
+}
+.result .r1,.r2{
+  display: flex;
+  padding: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+  .falling-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fall 8s linear infinite;
+    cursor: pointer;
+  }
+  
+  .falling-image1 {
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    animation: fall1 7s linear infinite;
+    cursor: pointer;
+  }
+  .falling-image2 {
+    position: absolute;
+    top: 0;
+    left: 15rem;
+    animation: fall 7s linear infinite;
+    cursor: pointer;
+  }
+  
+  .falling-image3 {
+    position: absolute;
+    top: 0;
+    left: 20rem;
+    animation: fall1 8s linear infinite;
+    cursor: pointer;
+ 
+  }
+  .falling-image4 {
+    position: absolute;
+    top: 0;
+    left: 25rem;
+    animation: fall 7s linear infinite;
+    cursor: pointer;
+    
+  }
+  .falling-image5 {
+    position: absolute;
+    top: 0;
+    left: 30rem;
+    animation: fall1 7s linear infinite;
+    cursor: pointer;
+    
+  }
+  .falling-image6 {
+    position: absolute;
+    top: 0;
+    left: 35rem;
+    animation: fall 7s linear infinite;
+    cursor: pointer;
+    
+  }
+  .falling-image7 {
+    position: absolute;
+    top: 0;
+    left: 40rem;
+    animation: fall1 7s linear infinite;
+    cursor: pointer;
+    
+  }
+  .falling-image8 {
+    position: absolute;
+    top: 0;
+    left: 45rem;
+    animation: fall 7s linear infinite;
+    cursor: pointer;
+    
+  }
+  @keyframes fall {
+    from {
+      top: 10;
+    }
+  
+    to {
+      top: 85vh;
+    }
+  }
+  @keyframes fall1 {
+    from {
+      top: 12rem;
+    }
+  
+    to {
+      top: 85vh;
+    }
+  }
+
+
+  .pop-up {
+    display: flex;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.01);
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+  transform-style: preserve-3d;
+}
+.pop-up-open{
+  visibility: visible;
+  top: 31%;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 10px 10px 20px;
+}
+.pop-up img {
+  width: 100px;
+
+  border-radius: 100%;
+
+  position: absolute;
+  top: 0%;
+  left: 35%;
+
+  transform: scale(1);
+}
+
+.pop-up h2 {
+ 
+  text-align: center;
+  padding-top: 2rem;
+}
+.pop-up .okbtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 60px;
+  height: 40px;
+  color: white;
+  background-color: green;
+  opacity: 0.5;
+  font-weight: 600;
+  
+}
+.pop-up .okbtn:hover{
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+}
+
+@media only screen and (max-width: 468px) {
+  body{
+    width: 100%;
+    height: 100%;
+  }
+  [class*="cover"] {
+    width: 100%;
+  }
+  [class*="container1"] {
+    width: 100%;
+    
+  }
+  [class*="container"] {
+    width: 100%;
+  }
+
+  .falling-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fall 8s linear infinite;
+    cursor: pointer;
+  }
+  
+  .falling-image1 {
+    position: absolute;
+    top: 0;
+    left: 3rem;
+    animation: fall1 7s linear infinite;
+    cursor: pointer;
+  }
+  .falling-image2 {
+    position: absolute;
+    top: 0;
+    left: 6rem;
+    animation: fall 7s linear infinite;
+    cursor: pointer;
+  }
+  
+  .falling-image3 {
+    position: absolute;
+    top: 0;
+    left: 9rem;
+    animation: fall1 8s linear infinite;
+    cursor: pointer;
+ 
+  }
+  .falling-image4 {
+    position: absolute;
+    top: 0;
+    left: 12rem;
+    animation: fall 7s linear infinite;
+    cursor: pointer;
+    
+  }
+  .falling-image5 {
+    position: absolute;
+    top: 0;
+    left: 15rem;
+    animation: fall1 7s linear infinite;
+    cursor: pointer;
+    
+  }
+  .falling-image6 {
+    position: absolute;
+    top: 0;
+    left: 18rem;
+    animation: fall 7s linear infinite;
+    cursor: pointer;
+    
+  }
+  .falling-image7 {
+   display: none;
+    
+  }
+  .falling-image8 {
+    display: none;
+  }
+
+ 
+  @keyframes fall {
+    from {
+      top: 10;
+    }
+  
+    to {
+      top: 85%;
+    }
+  }
+  @keyframes fall1 {
+    from {
+      top: 12rem;
+    }
+  
+    to {
+      top: 90%;
+    }
+  }
+
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  [class*="cover"] {
+    width: 100%;
+  }
+}
