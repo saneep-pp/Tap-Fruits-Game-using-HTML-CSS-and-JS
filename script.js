@@ -16,11 +16,7 @@ const audio = document.getElementById('background-audio');
 
 
 
-addEventListener('click', function() {
-            audio.muted = false;
-            audio.play();
-            playButton.style.display = 'none';
-        });
+
 let point = 0;
 let l = 1;
 const fruits = [
@@ -45,7 +41,7 @@ fruits.forEach((item) => {
       }),
       4000
     );
-
+   
     if (point == 50) {
       l = 1;
       levels.textContent = l;
