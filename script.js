@@ -1,3 +1,4 @@
+
 const apple = document.querySelector(".falling-image ");
 const banana = document.querySelector(".falling-image1");
 const grape = document.querySelector(".falling-image2");
@@ -13,6 +14,7 @@ const plevel = document.querySelector(".plevels");
 const popUp = document.querySelector(".pop-up");
 const okbtnE = document.querySelector(".okbtn");
 const audio = document.getElementById('background-audio');
+const audio1 = new Audio("./music/fruitsound.mp3");
 
 
 
@@ -34,6 +36,8 @@ fruits.forEach((item) => {
   item.addEventListener("click", () => {
     point += 1;
     points.textContent = point;
+    audio.volume=0.4;
+    audio1.play();
     item.style.display = "none";
     setTimeout(
       (display = () => {
